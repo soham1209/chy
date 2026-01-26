@@ -3,12 +3,14 @@ import React from 'react';
 export interface ServiceData {
   title: string;
   desc: string;
-  icon: string; // Changed from React.ElementType to string
-  features: string[];
+  icon: string;
+  image: string; // <--- ADD THIS LINE
+  features?: string[]; // Made optional as your new text doesn't strictly have bullet points
 }
 
+// ... rest of the file stays the same ...
 export interface TrustPointData {
-  icon: string; // Changed from React.ElementType to string
+  icon: string;
   title: string;
   text: string;
 }
@@ -18,7 +20,7 @@ export interface ButtonProps {
   variant?: 'primary' | 'secondary' | 'outlineDark' | 'ghost';
   className?: string;
   onClick?: () => void;
-  icon?: React.ReactNode; // Changed to ReactNode to accept <Icon />
+  icon?: React.ReactNode;
   href?: string;
 }
 
