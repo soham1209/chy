@@ -5,7 +5,7 @@ export const SERVICES: ServiceData[] = [
   {
     title: "Development Consultancy",
     desc: "We provide comprehensive feasibility studies, accurate costing, detailed project planning, and end-to-end advisory services.",
-    icon: "ClipboardList", // Changed to appropriate icons
+    icon: "ClipboardList", 
     image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2672&auto=format&fit=crop"
   },
   {
