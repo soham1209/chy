@@ -4,15 +4,21 @@ export interface ServiceData {
   title: string;
   desc: string;
   icon: string;
-  image: string; // <--- ADD THIS LINE
-  features?: string[]; // Made optional as your new text doesn't strictly have bullet points
+  image: string;
+  features?: string[];
 }
 
-// ... rest of the file stays the same ...
 export interface TrustPointData {
   icon: string;
   title: string;
   text: string;
+}
+
+export interface FocusAreaData {
+  id: string;
+  title: string;
+  desc: string;
+  image: string;
 }
 
 export interface ButtonProps {

@@ -1,4 +1,5 @@
 import { ServiceData, TrustPointData } from '@/types';
+import { FocusAreaData } from '@/types';
 
 export const SERVICES: ServiceData[] = [
   {
@@ -54,5 +55,32 @@ export const TRUST_POINTS: TrustPointData[] = [
     icon: "Clock", 
     title: "On-Time Delivery", 
     text: "Proven project management systems ensure your investment is ready sooner." 
+  }
+];
+
+export const FOCUS_AREAS: FocusAreaData[] = [
+  {
+    id: "01",
+    title: "Inner West",
+    desc: "A high-demand corridor known for its heritage charm blended with modern density. We focus on luxury terraces and boutique apartment complexes.",
+    image: "https://images.squarespace-cdn.com/content/v1/567209215a566877a0528942/1740633737912-237T47GH8G0FALPPFQ7Z/unsplash-image-zh_ofCt2r9c.jpg?format=2500w"
+  },
+  {
+    id: "02",
+    title: "North Shore",
+    desc: "Sydney's premier residential belt. Our projects here capitalize on the lush landscape and skyline views, delivering premium family residences.",
+    image: "https://images.squarespace-cdn.com/content/v1/5a8ff4eb4eddec7b6104d440/1519441868582-5C4EYNLMQIYY0OHWYXBB/new-home-builder-sydney.jpg?format=2500w"
+  },
+  {
+    id: "03",
+    title: "Western Sydney",
+    desc: "The growth engine of NSW. With the new airport and infrastructure boom, we are developing high-yield dual occupancies and new builds.",
+    image: "https://www.realestate.com.au/news-image/w_1000,h_563/v1661234099/news-lifestyle-content-assets/wp-content/production/capi_bc87362478c87c59b966751c79ede824_580ec350e5e6593e29ced27d086fbe26.webp?_i=AA"
+  },
+  {
+    id: "04",
+    title: "Greater Sydney",
+    desc: "Identifying emerging suburbs with capital growth potential. We bring affordable yet high-quality housing solutions to expanding communities.",
+    image: "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=2670&auto=format&fit=crop"
   }
 ];
