@@ -4,11 +4,15 @@ import { Hero } from '@/components/home/Hero';
 import { SectionLabel } from '@/components/ui/SectionLabel';
 import { AlternatingSection } from '@/components/home/AlternatingSection';
 import { ServicesSlider } from '@/components/services/ServicesSlider';
-import { MethodologyStack } from '@/components/home/MethodologyStack'; // <--- NEW IMPORT
+import { MethodologyStack } from '@/components/home/MethodologyStack';
+import { FocusAreas } from '@/components/home/FocusAreas';
 import { TrustSection } from '@/components/home/TrustSection';
 import { MissionSection } from '@/components/home/MissionSection';
 import { Button } from '@/components/ui/Button';
-import { FocusAreas } from '@/components/home/FocusAreas';
+
+// --- NEW IMPORTS ---
+import { TeamSection } from '@/components/home/TeamSection';
+import { ComplianceSection } from '@/components/home/ComplianceSection';
 
 export default function Home() {
   return (
@@ -38,21 +42,17 @@ export default function Home() {
           <ServicesSlider />
         </div>
       </section>
+      
+      <TeamSection />
 
-      <AlternatingSection 
-        title="Compliance & Approvals."
-        subtitle="Stress-Free Process"
-        desc="Navigating NSW councils can be complex. We handle the entire DA or CDC approval process, ensuring your project meets all compliance requirements without compromising on design intent."
-        image="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2689&auto=format&fit=crop"
-        reversed={true}
-      />
-
-      {/* --- NEW STACK SECTION REPLACES THE OLD METHODOLOGY --- */}
       <MethodologyStack />
 
-      <TrustSection />
-      
       <FocusAreas />
+
+      <TrustSection />
+
+      <ComplianceSection />
+
       
       <section className="py-24 bg-red-700 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 animate-pulse"></div>

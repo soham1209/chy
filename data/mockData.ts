@@ -84,3 +84,24 @@ export const FOCUS_AREAS: FocusAreaData[] = [
     image: "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=2670&auto=format&fit=crop"
   }
 ];
+
+export const TEAM_ROLES = [
+  {
+    role: "Architects",
+    title: "Design & Vision",
+    desc: "Our registered architects blend creative innovation with council compliance, ensuring every design maximizes yield and aesthetic value.",
+    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2689&auto=format&fit=crop"
+  },
+  {
+    role: "Builders",
+    title: "Construction & Delivery",
+    desc: "Master builders with decades of on-site experience. We manage the physical realization of your asset with precision and speed.",
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2670&auto=format&fit=crop"
+  },
+  {
+    role: "Consultants",
+    title: "Strategy & Feasibility",
+    desc: "The analytical backbone. Our consultants provide the financial modeling and market insights that turn a project into a profitable investment.",
+    image: "https://images.unsplash.com/photo-1664575602276-acd073f104c1?q=80&w=2670&auto=format&fit=crop"
+  }
+];
