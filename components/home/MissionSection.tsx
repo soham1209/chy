@@ -68,15 +68,15 @@ export const MissionSection: React.FC = () => {
         </div>
 
         {/* --- 1. The Interactive Tabs (Buttons) --- */}
-        <div className="flex justify-center mb-12">
-          <div className="inline-flex bg-white p-1.5 rounded-full border border-slate-200 shadow-sm relative">
+        <div className="flex justify-center mb-12 px-2">
+          <div className="inline-flex bg-white p-1 md:p-1.5 rounded-full border border-slate-200 shadow-sm relative">
             {TABS.map((tab, idx) => {
               const isActive = activeTab === idx;
               return (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(idx)}
-                  className={`relative z-10 px-8 py-3 rounded-full text-sm font-bold uppercase tracking-wider transition-colors duration-300 flex items-center gap-2 ${isActive ? "text-white" : "text-slate-500 hover:text-slate-900"}`}
+                  className={`relative z-10 px-3 py-2 md:px-8 md:py-3 rounded-full text-xs md:text-sm font-bold uppercase tracking-wider transition-colors duration-300 flex items-center gap-1 md:gap-2 ${isActive ? "text-white" : "text-slate-500 hover:text-slate-900"}`}
                 >
                   {isActive && (
                     <motion.div

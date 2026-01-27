@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Phone, Mail, MapPin, Instagram, Linkedin, Facebook } from 'lucide-react';
 
 export const Footer: React.FC = () => {
@@ -10,8 +11,14 @@ export const Footer: React.FC = () => {
         
         {/* --- 1. Brand & Description --- */}
         <div className="col-span-1">
-          <Link href="/" className="text-3xl font-bold text-white mb-6 group cursor-pointer inline-block">
-            CHY<span className="text-[#E63946] group-hover:text-[#c92a37] transition-colors">.</span>
+          <Link href="/" className="mb-6 group cursor-pointer inline-block">
+            <Image 
+              src="/logo.png" 
+              alt="CHY Developments" 
+              width={100} 
+              height={50} 
+              className="h-12 w-auto object-contain brightness-0 invert"
+            />
           </Link>
           <p className="text-sm leading-relaxed mb-8">
             CHY Developments delivers property development consultancy design, approvals, construction, and investment facilitation.
@@ -35,13 +42,38 @@ export const Footer: React.FC = () => {
         <div>
           <h4 className="text-white font-bold mb-6 uppercase text-xs tracking-widest">Our Company</h4>
           <ul className="space-y-3 text-sm">
-            {['Projects', 'Our Services', 'About Us', 'Privacy Policy'].map(item => (
-              <li key={item}>
-                <Link href="#" className="hover:text-[#E63946] transition-colors hover:translate-x-1 transform duration-300 inline-block w-full">
-                  {item}
-                </Link>
-              </li>
-            ))}
+            <li>
+              <Link
+                href="/projects"
+                className="hover:text-[#E63946] transition-colors hover:translate-x-1 transform duration-300 inline-block w-full"
+              >
+                Projects
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/services"
+                className="hover:text-[#E63946] transition-colors hover:translate-x-1 transform duration-300 inline-block w-full"
+              >
+                Our Services
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/#about"
+                className="hover:text-[#E63946] transition-colors hover:translate-x-1 transform duration-300 inline-block w-full"
+              >
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="#"
+                className="hover:text-[#E63946] transition-colors hover:translate-x-1 transform duration-300 inline-block w-full"
+              >
+                Privacy Policy
+              </Link>
+            </li>
           </ul>
         </div>
 
