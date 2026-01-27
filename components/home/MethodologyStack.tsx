@@ -40,10 +40,10 @@ const STEPS = [
     title: "Premium Construction",
     desc: "Construction without the headaches. Our project managers oversee the build quality, timeline, and budget, ensuring the design is executed to the millimeter.",
     icon: Hammer,
-    color: "bg-red-700",
+    color: "bg-[#E63946]",
     textColor: "text-white",
-    numberColor: "text-red-900",
-    borderColor: "border-red-600"
+    numberColor: "text-[#c92a37]",
+    borderColor: "border-[#E63946]"
   },
   {
     id: 5,
@@ -72,7 +72,7 @@ const StackCard = ({ step, index, setActiveStep }: { step: any, index: number, s
       // Viewport settings: 'amount: 0.1' means trigger as soon as 10% of the card is visible from the bottom
       viewport={{ amount: 0.2, margin: "0px 0px -100px 0px" }}
     >
-      <div className={`relative p-10 md:p-12 rounded-2xl shadow-2xl border ${step.borderColor} overflow-hidden min-h-[320px] flex flex-col justify-center ${step.color} ${step.textColor} hover:-translate-y-2 transition-transform duration-300`}>
+      <div className={`relative p-10 md:p-12 rounded-2xl shadow-2xl border ${step.borderColor} overflow-hidden min-h-80 flex flex-col justify-center ${step.color} ${step.textColor} hover:-translate-y-2 transition-transform duration-300`}>
         
         {/* Large Background Number */}
         <span 
@@ -133,7 +133,7 @@ export const MethodologyStack: React.FC = () => {
                      key={i} 
                      initial={false}
                      animate={{ 
-                       backgroundColor: i === activeStep ? '#dc2626' : '#1e293b', // Red-600 vs Slate-800
+                       backgroundColor: i === activeStep ? '#E63946' : '#1e293b', // Red-600 vs Slate-800
                        flex: i === activeStep ? 2 : 1, // Grow the active bar
                        opacity: i === activeStep || i < activeStep ? 1 : 0.3 // Dim future steps
                      }}
@@ -142,7 +142,7 @@ export const MethodologyStack: React.FC = () => {
                 ))}
               </div>
               
-              <div className="mt-4 text-sm font-bold text-slate-500 uppercase tracking-widest flex justify-between items-center w-[200px]">
+              <div className="mt-4 text-sm font-bold text-slate-500 uppercase tracking-widest flex justify-between items-center w-50">
                 <span>Step 0{activeStep + 1}</span>
                 <span className="text-slate-700">/</span>
                 <span>05</span>

@@ -35,7 +35,7 @@ export default function AboutPage() {
       --------------------------------------------------------------------------- */}
       <section className="relative pt-40 pb-20 md:pt-52 md:pb-32 bg-slate-900 text-white overflow-hidden">
         {/* Abstract Background Elements */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-red-600/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#c92a37] rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-slate-700/10 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2"></div>
         
         <div className="container mx-auto px-6 relative z-10">
@@ -56,7 +56,7 @@ export default function AboutPage() {
               </span>
             </motion.h1>
             
-            <motion.p variants={fadeInUp} className="text-xl text-slate-400 max-w-2xl leading-relaxed border-l border-red-600 pl-6">
+            <motion.p variants={fadeInUp} className="text-xl text-slate-400 max-w-2xl leading-relaxed border-l border-[#E63946] pl-6">
               CHY Developments sits at the intersection of architectural vision and construction reality. We exist to bridge the gap between "concept" and "keys".
             </motion.p>
           </motion.div>
@@ -85,7 +85,7 @@ export default function AboutPage() {
                   className="w-full h-full object-cover"
                 />
                 {/* Floating Quote Card */}
-                <div className="absolute bottom-8 right-8 bg-white p-8 max-w-xs shadow-2xl border-l-4 border-red-600 hidden md:block">
+                <div className="absolute bottom-8 right-8 bg-white p-8 max-w-xs shadow-2xl border-l-4 border-[#E63946] hidden md:block">
                   <p className="text-slate-800 italic font-medium mb-4">
                     "We don't just build structures. We engineer assets that perform for generations."
                   </p>
@@ -106,7 +106,7 @@ export default function AboutPage() {
             >
               <motion.h2 variants={fadeInUp} className="text-4xl font-bold text-slate-900 mb-6">
                 Redefining the standard of <br />
-                <span className="text-red-700">Sydney Development.</span>
+                <span className="text-[#E63946]">Sydney Development.</span>
               </motion.h2>
 
               <motion.p variants={fadeInUp} className="text-slate-600 text-lg leading-relaxed mb-6">
@@ -127,7 +127,7 @@ export default function AboutPage() {
                      "Financial transparency at every project milestone."
                    ].map((item, i) => (
                      <li key={i} className="flex items-start">
-                       <div className="mt-1 mr-4 bg-red-100 text-red-700 rounded-full p-1">
+                       <div className="mt-1 mr-4 bg-[#E63946]/20 text-[#E63946] rounded-full p-1">
                          <Check className="w-3 h-3" />
                        </div>
                        <span className="text-slate-700">{item}</span>
@@ -165,7 +165,7 @@ export default function AboutPage() {
                 className="px-4"
               >
                 <div className="text-4xl md:text-6xl font-black text-white mb-2 tracking-tighter">
-                  {stat.value}<span className="text-red-600 text-2xl md:text-4xl align-top">{stat.suffix}</span>
+                  {stat.value}<span className="text-[#E63946] text-2xl md:text-4xl align-top">{stat.suffix}</span>
                 </div>
                 <div className="text-slate-500 text-xs font-bold uppercase tracking-widest">{stat.label}</div>
               </motion.div>
@@ -211,9 +211,9 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.2, duration: 0.5 }}
-                className="bg-white p-10 border-t-4 border-slate-200 hover:border-red-600 shadow-sm hover:shadow-2xl transition-all duration-300 group"
+                className="bg-white p-10 border-t-4 border-slate-200 hover:border-[#E63946] shadow-sm hover:shadow-2xl transition-all duration-300 group"
               >
-                <div className="w-14 h-14 bg-slate-50 rounded-full flex items-center justify-center text-slate-400 group-hover:bg-red-50 group-hover:text-red-600 mb-6 transition-colors">
+                <div className="w-14 h-14 bg-slate-50 rounded-full flex items-center justify-center text-slate-400 group-hover:bg-[#E63946]/10 group-hover:text-[#E63946] mb-6 transition-colors">
                   <card.icon className="w-7 h-7" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-4">{card.title}</h3>
@@ -232,11 +232,11 @@ export default function AboutPage() {
       {/* ---------------------------------------------------------------------------
          6. CTA SECTION
       --------------------------------------------------------------------------- */}
-      <section className="py-24 bg-red-700 relative overflow-hidden">
+      <section className="py-24 bg-[#E63946] relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 animate-pulse"></div>
         <div className="container mx-auto px-6 text-center relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">Let's build something lasting.</h2>
-          <p className="text-red-100 text-xl mb-12 max-w-2xl mx-auto">
+          <p className="text-white/80 text-xl mb-12 max-w-2xl mx-auto">
             Whether you are an investor, a landowner, or a family looking to build, we are ready to guide you.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6">

@@ -99,7 +99,7 @@ export default function ServicesPage() {
               <motion.div 
                 key={idx}
                 variants={fadeInUp}
-                className="group bg-white rounded-2xl overflow-hidden border border-slate-100 hover:border-red-100 shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col h-full"
+                className="group bg-white rounded-2xl overflow-hidden border border-slate-100 hover:border-[#E63946]/20 shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col h-full"
               >
                 {/* Image Area */}
                 <div className="relative h-64 overflow-hidden">
@@ -115,13 +115,13 @@ export default function ServicesPage() {
                   </div>
                   {/* Arrow Interaction */}
                   <div className="absolute top-6 right-6 z-20 w-10 h-10 bg-white rounded-full flex items-center justify-center opacity-0 -translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 shadow-xl">
-                    <ArrowUpRight className="w-5 h-5 text-red-600" />
+                    <ArrowUpRight className="w-5 h-5 text-[#E63946]" />
                   </div>
                 </div>
 
                 {/* Content Area */}
                 <div className="p-10 flex flex-col flex-grow">
-                  <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-red-700 transition-colors">
+                  <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-[#E63946] transition-colors">
                     {service.title}
                   </h3>
                   <p className="text-slate-500 leading-relaxed mb-8 flex-grow">
@@ -133,7 +133,7 @@ export default function ServicesPage() {
                     <span className="text-xs font-bold uppercase tracking-wider text-slate-400 group-hover:text-slate-900 transition-colors">
                       Learn More
                     </span>
-                    <ArrowRight className="w-4 h-4 text-slate-300 group-hover:text-red-600 transition-colors transform group-hover:translate-x-2 duration-300" />
+                    <ArrowRight className="w-4 h-4 text-slate-300 group-hover:text-[#E63946] transition-colors transform group-hover:translate-x-2 duration-300" />
                   </div>
                 </div>
               </motion.div>
@@ -171,7 +171,7 @@ export default function ServicesPage() {
                   className="w-full flex items-center justify-between p-6 bg-white hover:bg-slate-50 transition-colors text-left"
                 >
                   <span className="font-bold text-slate-900 text-lg">{faq.question}</span>
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors ${openFaq === idx ? 'bg-red-600 text-white' : 'bg-slate-100 text-slate-500'}`}>
+                  <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors ${openFaq === idx ? 'bg-[#E63946] text-white' : 'bg-slate-100 text-slate-500'}`}>
                     {openFaq === idx ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                   </div>
                 </button>

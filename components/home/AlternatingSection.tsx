@@ -6,7 +6,7 @@ import { SectionLabel } from '@/components/ui/SectionLabel';
 import { AlternatingSectionProps } from '@/types';
 
 export const AlternatingSection: React.FC<AlternatingSectionProps> = ({ title, subtitle, desc, image, reversed = false }) => (
-  <div className="flex flex-col md:flex-row min-h-[600px] group">
+  <div className="flex flex-col md:flex-row min-h-150 group">
     <div className={`w-full md:w-1/2 relative overflow-hidden ${reversed ? 'md:order-2' : ''}`}>
       <img 
         src={image} 

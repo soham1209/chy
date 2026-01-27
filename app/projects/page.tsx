@@ -143,7 +143,7 @@ export default function ProjectsPage() {
                 {activeFilter === cat && (
                   <motion.div 
                     layoutId="activeFilter"
-                    className="absolute bottom-0 left-0 w-full h-[2px] bg-red-600"
+                    className="absolute bottom-0 left-0 w-full h-[2px] bg-[#E63946]"
                   />
                 )}
               </button>
@@ -194,7 +194,7 @@ export default function ProjectsPage() {
                     <div className="bg-white p-6 shadow-sm border border-slate-100 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                       
                       <div className="flex justify-between items-start mb-2">
-                         <span className="text-xs font-bold text-red-600 uppercase tracking-widest">{project.category}</span>
+                         <span className="text-xs font-bold text-[#E63946] uppercase tracking-widest">{project.category}</span>
                          <span className="text-xs font-bold text-slate-300">{project.year}</span>
                       </div>
                       
@@ -234,7 +234,7 @@ export default function ProjectsPage() {
             <div className="absolute bottom-0 left-0 w-full p-8 md:p-16 text-white">
                <div className="max-w-2xl">
                  <div className="flex items-center gap-4 mb-4">
-                   <span className="bg-red-600 px-3 py-1 text-xs font-bold uppercase tracking-widest">Award Winner</span>
+                   <span className="bg-[#E63946] px-3 py-1 text-xs font-bold uppercase tracking-widest">Award Winner</span>
                    <span className="text-slate-300 text-sm font-semibold">2023 Master Builders</span>
                  </div>
                  <h2 className="text-4xl md:text-6xl font-bold mb-6">The Horizon Dual Occupancy</h2>

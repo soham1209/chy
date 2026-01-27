@@ -18,11 +18,7 @@ export const TeamSection: React.FC = () => {
               Expertise Across <br/> Every Discipline.
             </h2>
           </div>
-          <div className="mb-2 hidden md:block">
-            <a href="/contact" className="text-sm font-bold uppercase tracking-wider text-slate-900 border-b border-slate-900 pb-1 hover:text-red-700 hover:border-red-700 transition-all">
-              Join our network
-            </a>
-          </div>
+          
         </div>
 
         {/* --- GLASSMORPHISM CARDS --- */}
@@ -34,7 +30,7 @@ export const TeamSection: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.2, duration: 0.5 }}
               viewport={{ once: true }}
-              className="group relative h-[500px] rounded-sm overflow-hidden cursor-pointer"
+              className="group relative h-125 rounded-sm overflow-hidden cursor-pointer"
             >
               
               {/* 1. Background Image */}
@@ -56,12 +52,12 @@ export const TeamSection: React.FC = () => {
               {/* 3. Glass Panel Overlay */}
               <div className="absolute bottom-0 left-0 w-full p-6 z-20">
                 {/* The Blur Container */}
-                <div className="bg-white/90 backdrop-blur-md border border-white/20 p-8 rounded-sm shadow-sm transition-all duration-500 group-hover:shadow-2xl group-hover:bg-white/95 group-hover:translate-y-0 translate-y-[80px]">
+                <div className="bg-white/90 backdrop-blur-md border border-white/20 p-8 rounded-sm shadow-sm transition-all duration-500 group-hover:shadow-2xl group-hover:bg-white/95 group-hover:translate-y-0 translate-y-20">
                   
                   {/* Role Title */}
                   <div className="flex items-center justify-between mb-2">
                     <h3 className="text-2xl font-bold text-slate-900">{item.role}</h3>
-                    <span className="text-xs font-bold text-slate-400 uppercase tracking-widest group-hover:text-red-600 transition-colors">0{idx + 1}</span>
+                    <span className="text-xs font-bold text-slate-400 uppercase tracking-widest group-hover:text-[#E63946] transition-colors">0{idx + 1}</span>
                   </div>
 
                   {/* Subtitle */}

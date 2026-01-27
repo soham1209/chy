@@ -17,7 +17,7 @@ export default function ContactPage() {
             </p>
             <div className="space-y-8">
               <div className="flex items-start group">
-                <div className="w-12 h-12 bg-white shadow-sm flex items-center justify-center mr-6 rounded-sm text-red-700 shrink-0 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 bg-white shadow-sm flex items-center justify-center mr-6 rounded-sm text-[#E63946] shrink-0 group-hover:scale-110 transition-transform">
                   <Phone className="icon-draw" />
                 </div>
                 <div>
@@ -26,7 +26,7 @@ export default function ContactPage() {
                 </div>
               </div>
               <div className="flex items-start group">
-                <div className="w-12 h-12 bg-white shadow-sm flex items-center justify-center mr-6 rounded-sm text-red-700 shrink-0 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 bg-white shadow-sm flex items-center justify-center mr-6 rounded-sm text-[#E63946] shrink-0 group-hover:scale-110 transition-transform">
                   <Mail className="icon-draw" />
                 </div>
                 <div>
@@ -37,26 +37,26 @@ export default function ContactPage() {
             </div>
           </div>
           
-          <div className="bg-white p-8 md:p-12 shadow-2xl rounded-sm border-t-4 border-red-700 relative overflow-hidden">
+          <div className="bg-white p-8 md:p-12 shadow-2xl rounded-sm border-t-4 border-[#E63946] relative overflow-hidden">
             <h3 className="text-2xl font-bold text-slate-900 mb-6">Get in Touch</h3>
             <form className="space-y-5 relative z-10">
               <div className="grid grid-cols-2 gap-5">
                 <div className="space-y-1">
                   <label className="text-xs font-bold uppercase text-slate-500">First Name</label>
-                  <input className="w-full bg-slate-50 border border-slate-200 p-3 rounded-sm focus:border-red-600 outline-none transition-colors" />
+                  <input className="w-full bg-slate-50 border border-slate-200 p-3 rounded-sm focus:border-[#E63946] outline-none transition-colors" />
                 </div>
                 <div className="space-y-1">
                   <label className="text-xs font-bold uppercase text-slate-500">Last Name</label>
-                  <input className="w-full bg-slate-50 border border-slate-200 p-3 rounded-sm focus:border-red-600 outline-none transition-colors" />
+                  <input className="w-full bg-slate-50 border border-slate-200 p-3 rounded-sm focus:border-[#E63946] outline-none transition-colors" />
                 </div>
               </div>
               <div className="space-y-1">
                 <label className="text-xs font-bold uppercase text-slate-500">Email</label>
-                <input type="email" className="w-full bg-slate-50 border border-slate-200 p-3 rounded-sm focus:border-red-600 outline-none transition-colors" />
+                <input type="email" className="w-full bg-slate-50 border border-slate-200 p-3 rounded-sm focus:border-[#E63946] outline-none transition-colors" />
               </div>
               <div className="space-y-1">
                 <label className="text-xs font-bold uppercase text-slate-500">Service Interest</label>
-                <select className="w-full bg-slate-50 border border-slate-200 p-3 rounded-sm focus:border-red-600 outline-none transition-colors text-slate-700">
+                <select className="w-full bg-slate-50 border border-slate-200 p-3 rounded-sm focus:border-[#E63946] outline-none transition-colors text-slate-700">
                   <option>Dual Occupancy / Duplex</option>
                   <option>New Build</option>
                   <option>Granny Flat</option>
@@ -65,7 +65,7 @@ export default function ContactPage() {
               </div>
               <div className="space-y-1">
                 <label className="text-xs font-bold uppercase text-slate-500">Message</label>
-                <textarea rows={4} className="w-full bg-slate-50 border border-slate-200 p-3 rounded-sm focus:border-red-600 outline-none transition-colors"></textarea>
+                <textarea rows={4} className="w-full bg-slate-50 border border-slate-200 p-3 rounded-sm focus:border-[#E63946] outline-none transition-colors"></textarea>
               </div>
               <Button className="w-full">Send Message</Button>
             </form>

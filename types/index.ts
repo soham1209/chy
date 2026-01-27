@@ -1,5 +1,14 @@
 import React from 'react';
 
+// --- NEW INTERFACE FOR BLOG POSTS ---
+export interface BlogPostData {
+  id: number;
+  title: string;
+  excerpt: string;
+  date: string;
+  image: string;
+}
+
 export interface ServiceData {
   title: string;
   desc: string;

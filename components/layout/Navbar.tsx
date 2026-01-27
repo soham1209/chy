@@ -28,7 +28,7 @@ export const Navbar: React.FC = () => {
       <div className="container mx-auto px-6 flex justify-between items-center">
         <Link href="/" className="cursor-pointer z-50 group">
           <h1 className={`text-2xl font-black tracking-tighter transition-colors duration-300 ${scrolled || mobileOpen || pathname !== '/' ? 'text-slate-900' : 'text-white'}`}>
-            CHY<span className="text-red-600 inline-block group-hover:animate-bounce">.</span>
+            CHY<span className="text-[#E63946] inline-block group-hover:animate-bounce">.</span>
           </h1>
         </Link>
 
@@ -40,11 +40,11 @@ export const Navbar: React.FC = () => {
               className={`relative text-sm font-semibold uppercase tracking-wide transition-colors group ${scrolled || pathname !== '/' ? 'text-slate-800' : 'text-white'}`}
             >
               {item.name}
-              <span className={`absolute -bottom-1 left-0 h-0.5 bg-red-600 transition-all group-hover:w-full ${pathname === item.path ? 'w-full' : 'w-0'}`}></span>
+              <span className={`absolute -bottom-1 left-0 h-0.5 bg-[#E63946] transition-all group-hover:w-full ${pathname === item.path ? 'w-full' : 'w-0'}`}></span>
             </Link>
           ))}
           <Button variant={scrolled ? 'primary' : 'primary'} className="py-3 px-6 text-xs" href="/contact">
-            Free Consultation
+            Book Consultation
           </Button>
         </div>
 

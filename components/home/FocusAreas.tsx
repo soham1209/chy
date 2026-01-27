@@ -34,7 +34,7 @@ export const FocusAreas: React.FC = () => {
         </div>
 
         {/* --- HORIZONTAL ACCORDION --- */}
-        <div className="flex flex-col lg:flex-row h-[600px] gap-4">
+        <div className="flex flex-col lg:flex-row h-150 gap-4">
           {FOCUS_AREAS.map((area, idx) => {
             const isActive = activeIdx === idx;
 
@@ -53,7 +53,7 @@ export const FocusAreas: React.FC = () => {
                 {/* Background Image */}
                 <div className="absolute inset-0">
                    {/* Gradient Overlay: Darker at bottom for text readability */}
-                   <div className={`absolute inset-0 z-10 transition-opacity duration-500 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent ${isActive ? 'opacity-90' : 'opacity-60'}`}></div>
+                   <div className={`absolute inset-0 z-10 transition-opacity duration-500 bg-linear-to-t from-slate-950 via-slate-950/20 to-transparent ${isActive ? 'opacity-90' : 'opacity-60'}`}></div>
                    <img 
                     src={area.image} 
                     alt={area.title} 
@@ -102,9 +102,9 @@ export const FocusAreas: React.FC = () => {
                         {area.desc}
                       </p>
                       
-                      <button className="group/btn inline-flex items-center text-sm font-bold text-white uppercase tracking-wider hover:text-red-400 transition-colors">
+                      <button className="group/btn inline-flex items-center text-sm font-bold text-white uppercase tracking-wider hover:text-[#E63946] transition-colors">
                         View Opportunities
-                        <span className="block h-[1px] w-8 bg-red-500 ml-4 group-hover/btn:w-12 transition-all duration-300"></span>
+                        <span className="block h-px w-8 bg-[#E63946] ml-4 group-hover/btn:w-12 transition-all duration-300"></span>
                       </button>
                     </motion.div>
                   </div>

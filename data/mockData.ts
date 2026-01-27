@@ -1,42 +1,73 @@
-import { ServiceData, TrustPointData } from '@/types';
-import { FocusAreaData } from '@/types';
+import { ServiceData, TrustPointData, FocusAreaData, BlogPostData } from '@/types';
 
+// --- SERVICES DATA ---
 export const SERVICES: ServiceData[] = [
   {
     title: "Development Consultancy",
     desc: "We provide comprehensive feasibility studies, accurate costing, detailed project planning, and end-to-end advisory services.",
     icon: "ClipboardList", 
-    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2672&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2672&auto=format&fit=crop",
+    features: ["Feasibility Studies", "Cost Planning", "Advisory Services"]
   },
   {
     title: "Architecture & Approvals",
     desc: "Registered architects for: DA / CDC Approvals, Concept & detailed drawings, 3D renders, Council submissions.",
     icon: "Ruler",
-    image: "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2500&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2500&auto=format&fit=crop",
+    features: ["DA & CDC Approvals", "3D Visualization", "Council Liaison"]
   },
   {
     title: "Construction Management",
     desc: "We deliver property solutions like residential homes, duplexes, granny flats, commercial fit-outs, and structural upgrades.",
     icon: "HardHat",
-    image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2670&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2670&auto=format&fit=crop",
+    features: ["Residential Builds", "Commercial Fit-outs", "Structural Upgrades"]
   },
   {
     title: "Investment Facilitation",
     desc: "We prepare investor-ready feasibility reports including: Budgeting, ROI models, Margin analysis, Timeline projections.",
     icon: "TrendingUp",
-    image: "https://images.unsplash.com/photo-1554224154-26032ffc0d07?q=80&w=2672&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1554224154-26032ffc0d07?q=80&w=2672&auto=format&fit=crop",
+    features: ["ROI Modeling", "Margin Analysis", "Investor Reports"]
   },
   {
     title: "End-to-End Delivery",
     desc: "We take responsibility from the first sketch to the final handover—ensuring excellence, trust, and quality at every step.",
     icon: "Key",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2673&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2673&auto=format&fit=crop",
+    features: ["Turnkey Solutions", "Quality Assurance", "Final Handover"]
   },
   {
     title: "Real Estate Development",
     desc: "Building visions into reality through expert real estate development — with integrity, innovation, and excellence at every stage.",
     icon: "Building2",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2670&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2670&auto=format&fit=crop",
+    features: ["Site Acquisition", "Project Visioning", "Market Strategy"]
+  }
+];
+
+// --- 3 BLOG POSTS ---
+export const SERVICE_POSTS: BlogPostData[] = [
+  {
+    id: 1,
+    title: "Maximizing Yield on Narrow Blocks",
+    excerpt: "How strategic architectural design can unlock hidden value in challenging sites.",
+    date: "Oct 12, 2025",
+    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2670&auto=format&fit=crop"
+  },
+  {
+    id: 2,
+    title: "The CDC Approval Advantage",
+    excerpt: "Why fast-tracking your approval through a Private Certifier might be the best ROI decision.",
+    date: "Nov 05, 2025",
+    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2666&auto=format&fit=crop"
+  },
+  {
+    id: 3,
+    title: "Construction Costs in 2026",
+    excerpt: "A transparent look at material costs and labor trends for the upcoming financial year.",
+    date: "Dec 01, 2025",
+    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2689&auto=format&fit=crop"
   }
 ];
 
@@ -75,7 +106,7 @@ export const FOCUS_AREAS: FocusAreaData[] = [
     id: "03",
     title: "Western Sydney",
     desc: "The growth engine of NSW. With the new airport and infrastructure boom, we are developing high-yield dual occupancies and new builds.",
-    image: "https://www.realestate.com.au/news-image/w_1000,h_563/v1661234099/news-lifestyle-content-assets/wp-content/production/capi_bc87362478c87c59b966751c79ede824_580ec350e5e6593e29ced27d086fbe26.webp?_i=AA"
+    image: "https://assets.gonest.com.au/App/PropertyImage/fcf09880-6cfa-11f0-b8e7-3594380da298/1ad25f42-1701-42e2-9753-c80e8f320d9c-lg-Robust-1.jpg?d89e507e1e1b83d0bf4a9b875b016597c40a5e3b"
   },
   {
     id: "04",
