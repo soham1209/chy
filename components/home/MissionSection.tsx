@@ -2,22 +2,23 @@
 import React from 'react';
 import { Target, Eye, TrendingUp, CheckCircle2, Shield, Leaf, MessageSquare } from 'lucide-react';
 import { SectionLabel } from '@/components/ui/SectionLabel';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion'; // Added Variants type import
 
 // --- Animation Variants ---
 
-const containerVariants = {
+// Explicitly typed as Variants to fix the TypeScript error
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.15, // Delays each child by 0.15s
+      staggerChildren: 0.15,
       delayChildren: 0.2
     }
   }
 };
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: { 
     opacity: 1, 
@@ -26,11 +27,11 @@ const cardVariants = {
   }
 };
 
-const pillVariants = {
+const pillVariants: Variants = {
   hover: { 
     scale: 1.05, 
-    borderColor: "rgba(185, 28, 28, 0.4)", // Red-700 with opacity
-    backgroundColor: "#fff1f2", // Red-50
+    borderColor: "rgba(185, 28, 28, 0.4)",
+    backgroundColor: "#fff1f2",
     transition: { duration: 0.2 } 
   }
 };
