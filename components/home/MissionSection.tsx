@@ -56,7 +56,7 @@ export const MissionSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <section className="py-24 bg-stone-50 relative overflow-hidden">
+    <section id="about" className="py-24 bg-stone-50 relative overflow-hidden">
       <div className="container mx-auto px-6">
         {/* --- Header --- */}
         <div className="text-center max-w-3xl mx-auto mb-16">
