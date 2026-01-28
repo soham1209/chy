@@ -29,10 +29,10 @@ export function PageHero({ title, breadcrumbs, className }: PageHeroProps) {
       />
       <div className="absolute inset-x-0 bottom-0 h-40" aria-hidden />
 
-      <div className="container mx-auto px-6 relative z-10 text-center space-y-6 md:mt-12 h-40">
-        
-        <div className="flex justify-center"><SectionLabel text={title} />
-    </div>
+      <div className="container mx-auto px-6 relative z-10 text-center space-y-6 mt-18 md:mt-12 h-40">
+        <div className="flex justify-center">
+          <SectionLabel text={title} />
+        </div>
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight uppercase text-white">
           {title}
         </h1>
