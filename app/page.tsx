@@ -9,6 +9,7 @@ import { FocusAreas } from "@/components/home/FocusAreas";
 import { TrustSection } from "@/components/home/TrustSection";
 import { MissionSection } from "@/components/home/MissionSection";
 import { Button } from "@/components/ui/Button";
+import { HomeWrapper } from "@/components/home/HomeWrapper";
 
 // --- NEW IMPORTS ---
 import { TeamSection } from "@/components/home/TeamSection";
@@ -16,7 +17,7 @@ import { ComplianceSection } from "@/components/home/ComplianceSection";
 
 export default function Home() {
   return (
-    <>
+    <HomeWrapper>
       <Hero />
 
       <MissionSection />
@@ -25,7 +26,7 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="flex justify-between items-end mb-12">
             <div>
-              <SectionLabel text="What We Do" />
+              <SectionLabel text="Our Services" />
               <h2 className="text-4xl md:text-5xl font-bold text-slate-900">
                 Building excellence across <br/>
                 every development.
@@ -75,6 +76,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </>
+    </HomeWrapper>
   );
 }

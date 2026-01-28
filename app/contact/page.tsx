@@ -3,15 +3,25 @@ import React from 'react';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import { SectionLabel } from '@/components/ui/SectionLabel';
 import { Button } from '@/components/ui/Button';
+import { PageHero } from '@/components/layout/PageHero';
 
 export default function ContactPage() {
   return (
-    <div className="pt-32 pb-24 bg-stone-50 min-h-screen">
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+    <div className="bg-stone-50 min-h-screen">
+
+      <PageHero
+        title="Contact"
+        breadcrumbs={[
+          { label: 'Home', href: '/' },
+          { label: 'Contact' }
+        ]}
+      />
+
+      <div className="container mx-auto px-6 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-12 items-start">
           
           {/* Left Side - Contact Info */}
-          <div>
+          <div className='md:ml-20'>
             <SectionLabel text="Contact Us" />
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 uppercase tracking-wide">Connect With Us</h1>
             <p className="text-slate-600 text-lg mb-12 leading-relaxed">
@@ -49,7 +59,7 @@ export default function ContactPage() {
           </div>
           
           {/* Right Side - Contact Form */}
-          <div className="bg-white p-8 md:p-12 shadow-lg rounded-lg relative overflow-hidden">
+          <div className="bg-white p-8 md:p-12 md:mr-20 shadow-lg rounded-lg relative overflow-hidden">
             <h3 className="text-2xl font-bold text-slate-900 mb-4">Contact Us</h3>
             <p className="text-slate-600 mb-8">
               We'd love to hear from you! Please fill out the form and we'll get back to you as soon as possible.

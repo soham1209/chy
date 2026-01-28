@@ -20,9 +20,9 @@ const STEPS = [
     title: "Architectural Design",
     desc: "Our in-house architects craft bespoke designs that balance aesthetic appeal with construction practicality, maximizing yield while adhering to controls.",
     icon: PenTool,
-    color: "bg-white",
+    color: "bg-slate-200",
     textColor: "text-slate-900",
-    numberColor: "text-slate-200",
+    numberColor: "text-slate-400",
     borderColor: "border-slate-200"
   },
   {

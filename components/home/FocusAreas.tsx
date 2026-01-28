@@ -18,18 +18,8 @@ export const FocusAreas: React.FC = () => {
             <SectionLabel text="Our Focus Areas" />
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 leading-[1.1] tracking-tight mt-4">
               Key Development Corridors <br/>
-              <span className="text-slate-400 font-medium">Shaping Sydney's Future.</span>
+              <span className="">Across Sydney.</span>
             </h2>
-          </div>
-          
-          {/* Navigation Controls */}
-          <div className="flex gap-3">
-             <button className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all duration-300">
-               <span className="text-xl leading-none pb-1">←</span>
-             </button>
-             <button className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all duration-300">
-               <span className="text-xl leading-none pb-1">→</span>
-             </button>
           </div>
         </div>
 
@@ -64,23 +54,8 @@ export const FocusAreas: React.FC = () => {
                 {/* Content Container */}
                 <div className="absolute inset-0 z-20 p-8 md:p-10 flex flex-col justify-end">
                   
-                  {/* Top Right Arrow */}
-                  <div className={`absolute top-8 right-8 w-10 h-10 rounded-full border border-white/30 flex items-center justify-center text-white transition-all duration-500 ${isActive ? 'opacity-100 rotate-45' : 'opacity-0 rotate-0'}`}>
-                    <ArrowUpRight className="w-5 h-5" />
-                  </div>
-
                   {/* Main Text Content */}
                   <div className="relative">
-                    {/* Location Tag */}
-                    <motion.div 
-                      layout="position"
-                      className="flex items-center space-x-2 mb-3"
-                    >
-                      <span className="bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-white border border-white/10">
-                        Region {area.id}
-                      </span>
-                    </motion.div>
-
                     {/* Title - Cleaner, tighter, professional */}
                     <motion.h3 
                       className={`font-bold text-white mb-2 leading-tight tracking-tight transition-all duration-500 ${isActive ? 'text-4xl md:text-5xl' : 'text-2xl md:text-3xl'}`}

@@ -41,12 +41,7 @@ export const TeamSection: React.FC = () => {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale-0 md:grayscale md:group-hover:grayscale-0"
                 />
                 {/* Dark Overlay for text readability */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/20 to-transparent md:bg-slate-900/10 md:group-hover:bg-transparent transition-colors duration-500"></div>
-              </div>
-
-              {/* 2. Top Arrow Icon - Hidden on mobile */}
-              <div className="absolute top-6 right-6 z-20 w-12 h-12 bg-white rounded-full hidden md:flex items-center justify-center opacity-0 -translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-100 shadow-xl">
-                <ArrowUpRight className="w-5 h-5 text-slate-900" />
+                <div className="absolute inset-0 bg-linear-to-t from-slate-900/70 via-slate-900/20 to-transparent md:bg-slate-900/10 md:group-hover:bg-transparent transition-colors duration-500"></div>
               </div>
 
               {/* 3. Mobile Card Content (Always visible) */}

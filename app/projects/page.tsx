@@ -273,64 +273,21 @@
 
 "use client";
 import React from 'react';
-import { motion, Variants } from 'framer-motion';
-import { SectionLabel } from '@/components/ui/SectionLabel';
+import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/Button';
-import { ArrowUpRight } from 'lucide-react';
-
-// --- Animation Variants ---
-const fadeInUp: Variants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { 
-    opacity: 1, 
-    y: 0, 
-    transition: { duration: 0.6, ease: "easeOut" } 
-  }
-};
-
-const staggerContainer: Variants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.1 }
-  }
-};
+import { PageHero } from '@/components/layout/PageHero';
 
 export default function ProjectsPage() {
   return (
     <div className="bg-white">
       
-      {/* ---------------------------------------------------------------------------
-         1. HERO SECTION (Unchanged)
-      --------------------------------------------------------------------------- */}
-      <section className="relative pt-40 pb-20 md:pt-52 md:pb-32 bg-slate-900 text-white overflow-hidden">
-        {/* Abstract Background */}
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-slate-800/30 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2"></div>
-        
-        <div className="container mx-auto px-6 relative z-10">
-          <motion.div 
-            initial="hidden"
-            animate="visible"
-            variants={staggerContainer}
-            className="max-w-4xl"
-          >
-            <motion.div variants={fadeInUp}>
-              <SectionLabel text="Selected Works" dark={true} />
-            </motion.div>
-            
-            <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl font-bold leading-[1.1] mb-8 tracking-tight">
-              A legacy of <br />
-              <span className="text-slate-500">
-                built excellence.
-              </span>
-            </motion.h1>
-            
-            <motion.p variants={fadeInUp} className="text-xl text-slate-400 max-w-2xl leading-relaxed">
-               Explore our portfolio of completed projects, showcasing our commitment to design integrity, yield optimization, and construction quality.
-            </motion.p>
-          </motion.div>
-        </div>
-      </section>
+      <PageHero
+        title="Projects"
+        breadcrumbs={[
+          { label: 'Home', href: '/' },
+          { label: 'Projects' }
+        ]}
+      />
 
       {/* ---------------------------------------------------------------------------
          2. COMING SOON SECTION (Replaces Filter & Grid)

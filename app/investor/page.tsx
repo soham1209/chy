@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import { motion, Variants } from 'framer-motion';
+import { PageHero } from '@/components/layout/PageHero';
 import { SectionLabel } from '@/components/ui/SectionLabel';
 import { Button } from '@/components/ui/Button';
 import { Check, TrendingUp, FileText, Shield, Clock, ArrowRight, Phone, Mail } from 'lucide-react';
@@ -44,38 +45,13 @@ export default function InvestorPage() {
   return (
     <div className="bg-white">
       
-      {/* ---------------------------------------------------------------------------
-         1. HERO SECTION
-      --------------------------------------------------------------------------- */}
-      <section className="relative pt-40 pb-20 md:pt-52 md:pb-32 bg-slate-900 text-white overflow-hidden">
-        {/* Abstract Background Elements */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#c92a37] rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 opacity-50"></div>
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-slate-700/10 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2"></div>
-        
-        <div className="container mx-auto px-6 relative z-10">
-          <motion.div 
-            initial="hidden"
-            animate="visible"
-            variants={staggerContainer}
-            className="max-w-4xl"
-          >
-            <motion.div variants={fadeInUp}>
-              <SectionLabel text="Investment Opportunities" dark={true} />
-            </motion.div>
-            
-            <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl font-bold leading-[1.1] mb-8 tracking-tight">
-              Invest with <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E63946] to-[#c92a37]">
-                CHY Developments.
-              </span>
-            </motion.h1>
-            
-            <motion.p variants={fadeInUp} className="text-xl text-slate-400 max-w-2xl leading-relaxed border-l border-[#E63946] pl-6">
-              Partner on project-based opportunities with structured returns, transparent reporting, and execution by licensed professionals.
-            </motion.p>
-          </motion.div>
-        </div>
-      </section>
+      <PageHero
+        title="Investor Opportunities"
+        breadcrumbs={[
+          { label: 'Home', href: '/' },
+          { label: 'Investors' }
+        ]}
+      />
 
       {/* ---------------------------------------------------------------------------
          2. WHY INVEST SECTION
@@ -89,6 +65,12 @@ export default function InvestorPage() {
             variants={staggerContainer}
             className="text-center max-w-3xl mx-auto mb-16"
           >
+            <motion.h2 variants={fadeInUp} className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+              Why Invest with <span className="text-[#E63946]">CHY Developments?</span>
+            </motion.h2>
+            <motion.p variants={fadeInUp} className="text-lg text-slate-600 leading-relaxed">
+              Partner on project-based opportunities with structured returns, transparent reporting, and execution by licensed professionals.
+            </motion.p>
           </motion.div>
           {/* Two Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">

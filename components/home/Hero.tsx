@@ -1,15 +1,15 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { ArrowRight, Download, Home } from "lucide-react"; // Switched to Home icon to match image
+import { ArrowRight, Download, Home } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { motion, AnimatePresence } from "framer-motion";
 
 // --- Configuration ---
 const HERO_IMAGES = [
-  "https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2671&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2666&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?q=80&w=2670&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2670&auto=format&fit=crop",
+  "/home1.avif",
+  "/home2.avif",
+  "/home3.avif",
+  "/home4.avif",
 ];
 
 const SLIDE_DURATION = 5000; // 5 Seconds per slide
@@ -17,6 +17,7 @@ const SLIDE_DURATION = 5000; // 5 Seconds per slide
 export const Hero: React.FC = () => {
   const [index, setIndex] = useState(0);
 
+  // Auto-advance slides
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % HERO_IMAGES.length);
@@ -33,11 +34,10 @@ export const Hero: React.FC = () => {
             key={index}
             src={HERO_IMAGES[index]}
             alt={`Hero Slide ${index + 1}`}
-            // Animation: Start slightly zoomed in and transparent, fade in to normal
             initial={{ opacity: 0, scale: 1.1 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 2, ease: "easeOut" }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
             className="w-full h-full object-cover absolute inset-0"
           />
         </AnimatePresence>

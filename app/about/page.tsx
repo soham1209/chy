@@ -4,6 +4,7 @@ import { motion, Variants } from 'framer-motion'; // 1. Import Variants
 import { SectionLabel } from '@/components/ui/SectionLabel';
 import { Button } from '@/components/ui/Button';
 import { TeamSection } from '@/components/home/TeamSection';
+import { PageHero } from '@/components/layout/PageHero';
 import { ArrowRight, Check, Award, Building } from 'lucide-react';
 
 // --- Animation Variants ---
@@ -29,39 +30,14 @@ const staggerContainer: Variants = {
 export default function AboutPage() {
   return (
     <div className="bg-white">
-      
-      {/* ---------------------------------------------------------------------------
-         1. HERO SECTION
-      --------------------------------------------------------------------------- */}
-      <section className="relative pt-40 pb-20 md:pt-52 md:pb-32 bg-slate-900 text-white overflow-hidden">
-        {/* Abstract Background Elements */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#c92a37] rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-slate-700/10 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2"></div>
-        
-        <div className="container mx-auto px-6 relative z-10">
-          <motion.div 
-            initial="hidden"
-            animate="visible"
-            variants={staggerContainer}
-            className="max-w-4xl"
-          >
-            <motion.div variants={fadeInUp}>
-              <SectionLabel text="Who We Are" dark={true} />
-            </motion.div>
-            
-            <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl font-bold leading-[1.1] mb-8 tracking-tight">
-              Building the skyline, <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-500">
-                honoring the streetscape.
-              </span>
-            </motion.h1>
-            
-            <motion.p variants={fadeInUp} className="text-xl text-slate-400 max-w-2xl leading-relaxed border-l border-[#E63946] pl-6">
-              CHY Developments sits at the intersection of architectural vision and construction reality. We exist to bridge the gap between "concept" and "keys".
-            </motion.p>
-          </motion.div>
-        </div>
-      </section>
+
+      <PageHero
+        title="About Us"
+        breadcrumbs={[
+          { label: 'Home', href: '/' },
+          { label: 'About' }
+        ]}
+      />
 
       {/* ---------------------------------------------------------------------------
          2. IMAGE & STORY SPLIT

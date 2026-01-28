@@ -31,17 +31,19 @@ export const Navbar: React.FC = () => {
     { name: 'Contact', path: '/contact' },
   ];
 
+  const hasSolidBackground = scrolled || mobileOpen;
+
   return (
     <>
-      <nav className={`fixed w-full z-50 transition-all duration-500 ${scrolled || mobileOpen ? 'bg-white/95 backdrop-blur-md shadow-lg py-4' : 'bg-transparent py-6'}`}>
+      <nav className={`fixed w-full z-50 transition-all duration-500 ${hasSolidBackground ? 'bg-white/95 backdrop-blur-md shadow-lg py-2' : 'bg-transparent py-6'}`}>
         <div className="container mx-auto px-6 flex justify-between items-center">
           <Link href="/" className="cursor-pointer z-50 group">
             <Image 
-              src="/logo.png" 
+              src={hasSolidBackground ? '/logo.png' : '/logo2.png'} 
               alt="CHY Developments" 
-              width={80} 
-              height={40} 
-              className="h-10 w-auto object-contain"
+              width={180} 
+              height={80} 
+              className="h-16 w-auto object-contain"
               priority
             />
           </Link>
@@ -65,7 +67,7 @@ export const Navbar: React.FC = () => {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden z-50">
-            <button onClick={() => setMobileOpen(!mobileOpen)} className={scrolled || mobileOpen ? 'text-slate-900' : 'text-white'}>
+            <button onClick={() => setMobileOpen(!mobileOpen)} className={hasSolidBackground ? 'text-slate-900' : 'text-white'}>
               {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
