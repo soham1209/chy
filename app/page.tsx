@@ -22,7 +22,7 @@ export default function Home() {
 
       <MissionSection />
 
-      <section className="py-24 bg-white overflow-hidden">
+      <section className="py-12 md:py-20 bg-white overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="flex justify-between items-end mb-12">
             <div>

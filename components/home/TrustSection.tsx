@@ -36,7 +36,7 @@ export const TrustSection: React.FC = () => {
   const [activeIdx, setActiveIdx] = useState(0);
 
   return (
-    <section className="py-24 bg-stone-50 relative overflow-hidden">
+    <section className="py-16 md:py-12 bg-stone-50 relative overflow-hidden">
       <div className="container mx-auto px-6">
         
         <div className="flex flex-col lg:flex-row gap-16 items-center">
@@ -89,7 +89,7 @@ export const TrustSection: React.FC = () => {
           </div>
 
           {/* --- RIGHT SIDE: Dynamic Image & Description Display --- */}
-          <div className="lg:w-1/2 relative h-150 w-full rounded-2xl overflow-hidden shadow-2xl group">
+          <div className="lg:w-1/2 relative w-full min-h-100 md:min-h-100 lg:min-h-140 rounded-2xl overflow-hidden shadow-2xl group">
             <AnimatePresence mode='wait'>
               <motion.div
                 key={activeIdx}
@@ -103,12 +103,12 @@ export const TrustSection: React.FC = () => {
                   src={TRUST_CONTENT[activeIdx].image}
                   alt={TRUST_CONTENT[activeIdx].title}
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
-                
-                {/* Gradient Overlay for Text Readability */}
+              
                 <div className="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
                 
-                {/* Content Overlay (The Long Description) */}
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}

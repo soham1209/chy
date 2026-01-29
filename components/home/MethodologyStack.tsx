@@ -56,20 +56,16 @@ const STEPS = [
     borderColor: "border-slate-800"
   }
 ];
-
-// Helper Component to handle detection logic
 const StackCard = ({ step, index, setActiveStep }: { step: any, index: number, setActiveStep: (i: number) => void }) => {
   return (
     <motion.div 
       className="sticky"
       style={{ top: `${index * 40 + 100}px` }}
-      // Logic: When I enter view (scroll down), I am active. 
-      // When I leave view (scroll up and slide down), the guy before me is active.
       onViewportEnter={() => setActiveStep(index)}
       onViewportLeave={() => {
         if (index > 0) setActiveStep(index - 1);
       }}
-      // Viewport settings: 'amount: 0.1' means trigger as soon as 10% of the card is visible from the bottom
+      
       viewport={{ amount: 0.2, margin: "0px 0px -100px 0px" }}
     >
       <div className={`relative p-10 md:p-12 rounded-2xl shadow-2xl border ${step.borderColor} overflow-hidden min-h-80 flex flex-col justify-center ${step.color} ${step.textColor} hover:-translate-y-2 transition-transform duration-300`}>

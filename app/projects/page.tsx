@@ -292,7 +292,7 @@ export default function ProjectsPage() {
       {/* ---------------------------------------------------------------------------
          2. COMING SOON SECTION (Replaces Filter & Grid)
       --------------------------------------------------------------------------- */}
-      <section className="py-24 bg-stone-50 min-h-[600px] flex items-center justify-center">
+      <section className="py-24 bg-stone-50 min-h-150 flex items-center justify-center">
         <div className="container mx-auto px-6 flex justify-center">
           
           <motion.div 

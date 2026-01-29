@@ -42,12 +42,13 @@ export const FocusAreas: React.FC = () => {
               >
                 {/* Background Image */}
                 <div className="absolute inset-0">
-                   {/* Gradient Overlay: Darker at bottom for text readability */}
                    <div className={`absolute inset-0 z-10 transition-opacity duration-500 bg-linear-to-t from-slate-950 via-slate-950/20 to-transparent ${isActive ? 'opacity-90' : 'opacity-60'}`}></div>
                    <img 
                     src={area.image} 
                     alt={area.title} 
                     className={`w-full h-full object-cover transition-transform duration-1000 ease-in-out ${isActive ? 'scale-100' : 'scale-110'}`}
+                    loading="lazy"
+                    decoding='async'
                    />
                 </div>
 

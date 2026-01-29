@@ -24,7 +24,7 @@ export function PageHero({ title, breadcrumbs, className }: PageHeroProps) {
     >
       {/* Subtle skyline-style backdrop */}
       <div
-        className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950"
+        className="absolute inset-0 bg-linear-to-b from-slate-900 via-slate-950 to-slate-950"
         aria-hidden
       />
       <div className="absolute inset-x-0 bottom-0 h-40" aria-hidden />

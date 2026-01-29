@@ -14,38 +14,53 @@ export const Preloader: React.FC<PreloaderProps> = ({
   const [isFadingOut, setIsFadingOut] = useState(false);
   const [minTimePassed, setMinTimePassed] = useState(false);
 
-  // 1. Define custom keyframes for the scan and wipe effect
-  // We put this in a style tag to ensure synchronization without complex Tailwind config
+  // --- 1. Pure CSS Animations (Runs Instantly, No JS Lag) ---
   const styles = `
-    @keyframes scan-move {
-      0%, 100% { top: 0%; }
-      50% { top: 100%; }
-    }
-    
-    @keyframes text-reveal {
-      0%, 100% { height: 0%; }
-      50% { height: 100%; }
+    @keyframes dance {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-30px) scale(1.15); }
     }
 
-    .animate-scan-move {
-      animation: scan-move 3s ease-in-out infinite;
+    @keyframes indeterminate-bar {
+      0% { transform: translateX(-100%); }
+      50% { transform: translateX(0%); }
+      100% { transform: translateX(100%); }
+    }
+
+    @keyframes fade-up {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate-dance {
+      animation: dance 1.2s ease-in-out infinite;
     }
     
-    .animate-text-reveal {
-      animation: text-reveal 3s ease-in-out infinite;
+    /* Stagger the letters */
+    .delay-1 { animation-delay: 0s; }
+    .delay-2 { animation-delay: 0.15s; }
+    .delay-3 { animation-delay: 0.3s; }
+
+    .animate-bar-loop {
+      animation: indeterminate-bar 2s linear infinite;
+    }
+
+    .animate-fade-up {
+      animation: fade-up 0.6s ease-out forwards;
+      animation-delay: 0.5s;
+      opacity: 0; /* Start invisible */
     }
   `;
 
-  // Minimum display time
   useEffect(() => {
     const timer = setTimeout(() => {
       setMinTimePassed(true);
-    }, 2000);
+    }, 2000); 
     return () => clearTimeout(timer);
   }, []);
 
-  // Fade out logic
   useEffect(() => {
+    // Only fade out when BOTH content is loaded AND min time passed
     if (isContentLoaded && minTimePassed && !isFadingOut) {
       setIsFadingOut(true);
       setTimeout(() => {
@@ -61,43 +76,37 @@ export const Preloader: React.FC<PreloaderProps> = ({
     <>
       <style>{styles}</style>
       <div
-        className={`fixed inset-0 z-[9999] bg-slate-950 flex flex-col items-center justify-center font-sans text-white transition-opacity duration-600 ease-in-out ${
+        className={`fixed inset-0 z-9999 bg-slate-950 flex flex-col items-center justify-center font-sans text-white transition-opacity duration-600 ease-in-out ${
           isFadingOut ? "opacity-0" : "opacity-100"
         }`}
       >
-        <div className="relative">
-          {/* Container with Padding */}
-          <div className="relative px-12 md:px-16">
-            
-            {/* --- Layer 1: The Blueprint Outline (Always Visible) --- */}
-            {/* This stays transparent with a border at all times */}
-            <h1
-              className="text-6xl md:text-8xl font-black tracking-tighter text-transparent select-none text-center"
-              style={{ WebkitTextStroke: "1px #475569" }}
-            >
-              CHY
-            </h1>
+        <div className="relative flex flex-col items-center">
+          
+          {/* 1. Dancing Logo Text (CSS Animation) */}
+          <div className="flex items-center gap-6 mb-6">
+            {["C", "H", "Y"].map((letter, i) => (
+              <span
+                key={i}
+                className={`text-7xl md:text-9xl font-black tracking-tighter text-white inline-block origin-bottom animate-dance delay-${i + 1}`}
+              >
+                {letter}
+              </span>
+            ))}
+          </div>
 
-            {/* --- Layer 2: The Filled Text (Revealed by Animation) --- */}
-            {/* We control the HEIGHT of this container to clip the text */}
-            <div className="absolute top-0 left-0 w-full animate-text-reveal overflow-hidden flex justify-center">
-              {/* IMPORTANT: This h1 must match the Layer 1 h1 exactly for perfect alignment */}
-              <h1 className="text-6xl md:text-8xl font-black tracking-tighter text-white select-none text-center">
-                CHY
-              </h1>
-            </div>
+          {/* 2. Progress Bar (Indeterminate / Looping) */}
+          {/* Using overflow-hidden to mask the moving bar */}
+          <div className="w-40 h-[3px] bg-slate-800/50 rounded-full overflow-hidden relative">
+            <div className="absolute top-0 left-0 w-full h-full bg-[#E63946] animate-bar-loop" />
+          </div>
 
-            {/* --- Layer 3: The Scan Line --- */}
-            {/* Moves up and down, perfectly synced with the height of Layer 2 */}
-            <div className="absolute left-0 w-full h-1 bg-[#E63946] animate-scan-move shadow-[0_0_10px_#E63946]"></div>
-            
+          {/* 3. Subtitle */}
+          <div className="mt-5 animate-fade-up">
+            <span className="text-sm md:text-base font-bold uppercase tracking-[0.4em] text-slate-500">
+              Developments
+            </span>
           </div>
         </div>
-
-        {/* Status Text */}
-        <p className="mt-8 text-[10px] font-bold uppercase tracking-[0.3em] text-slate-500 animate-pulse">
-          Developments
-        </p>
       </div>
     </>
   );

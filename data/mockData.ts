@@ -112,7 +112,7 @@ export const FOCUS_AREAS: FocusAreaData[] = [
     id: "04",
     title: "Greater Sydney",
     desc: "Identifying emerging suburbs with capital growth potential. We bring affordable yet high-quality housing solutions to expanding communities.",
-    image: "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=2670&auto=format&fit=crop"
+    image: "https://i2.au.reastatic.net/800x600-format=webp/4416e2d439b4cfda13fe2635720ee227e9d8cab64b9ea5420bf20ed8783e358b/image.jpg"
   }
 ];
 

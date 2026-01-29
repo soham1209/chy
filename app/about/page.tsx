@@ -7,9 +7,6 @@ import { TeamSection } from '@/components/home/TeamSection';
 import { PageHero } from '@/components/layout/PageHero';
 import { ArrowRight, Check, Award, Building } from 'lucide-react';
 
-// --- Animation Variants ---
-
-// 2. Apply the 'Variants' type here to fix the "ease" error
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: { 
@@ -54,11 +51,13 @@ export default function AboutPage() {
               transition={{ duration: 0.8 }}
               className="lg:w-1/2 relative"
             >
-              <div className="relative h-[600px] w-full rounded-sm overflow-hidden">
+              <div className="relative h-150 w-full rounded-sm overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1486325212027-8081e485255e?q=80&w=2670&auto=format&fit=crop" 
                   alt="Architectural details" 
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
                 {/* Floating Quote Card */}
                 <div className="absolute bottom-8 right-8 bg-white p-8 max-w-xs shadow-2xl border-l-4 border-[#E63946] hidden md:block">

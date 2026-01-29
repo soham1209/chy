@@ -39,6 +39,8 @@ export const Hero: React.FC = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 1.5, ease: "easeOut" }}
             className="w-full h-full object-cover absolute inset-0"
+            loading="lazy"
+            decoding="async"
           />
         </AnimatePresence>
 

@@ -43,7 +43,7 @@ export const Navbar: React.FC = () => {
               alt="CHY Developments" 
               width={180} 
               height={80} 
-              className="h-16 w-auto object-contain"
+              className=" h-20 w-auto object-contain"
               priority
             />
           </Link>
@@ -74,8 +74,6 @@ export const Navbar: React.FC = () => {
         </div>
       </nav>
 
-      {/* Mobile Menu Overlay */}
-      {/* Mobile Menu Overlay */}
       {mobileOpen && (
         <div className="fixed inset-0 bg-white z-40 md:hidden animate-fadeIn">
           <div className="flex flex-col items-center justify-center h-full space-y-6 pt-20">

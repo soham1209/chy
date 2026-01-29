@@ -46,7 +46,7 @@ export default function InvestorPage() {
     <div className="bg-white">
       
       <PageHero
-        title="Investor Opportunities"
+        title="Investor"
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'Investors' }

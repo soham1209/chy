@@ -12,6 +12,8 @@ export const AlternatingSection: React.FC<AlternatingSectionProps> = ({ title, s
         src={image} 
         alt={title} 
         className="w-full h-full object-cover absolute inset-0 transition-transform duration-[2s] group-hover:scale-110" 
+        loading='lazy'
+        decoding='async'
       />
       <div className="absolute inset-0 bg-slate-900/20 group-hover:bg-slate-900/10 transition-colors duration-500"></div>
     </div>
