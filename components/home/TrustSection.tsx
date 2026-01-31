@@ -43,8 +43,10 @@ export const TrustSection: React.FC = () => {
           
           {/* --- LEFT SIDE: Interactive List --- */}
           <div className="lg:w-1/2 relative z-10">
-            <div className="mb-12">
-              <SectionLabel text="Why Choose CHY" />
+            <div className="mb-12 text-center lg:text-left">
+              <div className="flex justify-center lg:justify-start">
+                <SectionLabel text="Why Choose CHY" />
+              </div>
               <h2 className="text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
                 Partners in <br/>
                 Precision.

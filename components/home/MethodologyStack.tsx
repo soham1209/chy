@@ -113,8 +113,10 @@ export const MethodologyStack: React.FC = () => {
           
           {/* --- LEFT SIDE: Sticky Title & Progress --- */}
           <div className="lg:w-1/3">
-            <div className="sticky top-32">
-              <SectionLabel text="Our Methodology" dark={true} />
+            <div className="sticky top-32 text-center lg:text-left">
+              <div className="flex justify-center lg:justify-start">
+                <SectionLabel text="Our Methodology" dark={true} />
+              </div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
                 A Clear Path to <br/> Completion.
               </h2>

@@ -34,7 +34,10 @@ export default function Home() {
                 every development.
               </h2>
             </div>
-            <div className="mt-4">
+           
+          </div>
+          <ServicesSlider />
+           <div className="mt-4 flex justify-center">
               <Button
                 variant="ghost"
                 icon={<ArrowRight className="w-4 h-4" />}
@@ -43,8 +46,6 @@ export default function Home() {
                 View All Services
               </Button>
             </div>
-          </div>
-          <ServicesSlider />
         </div>
       </section>
 
