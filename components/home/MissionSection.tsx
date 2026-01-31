@@ -56,12 +56,14 @@ export const MissionSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <section id="about" className="py-24 bg-stone-50 relative overflow-hidden">
+    <section id="about" className="py-12 bg-stone-50 relative overflow-hidden">
       <div className="container mx-auto px-6">
         {/* --- Header --- */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <SectionLabel text="About us" />
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mt-4 leading-tight">
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          <div className="flex justify-center">
+            <SectionLabel text="About us" />
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
             Driven by Purpose. <br />
             Defined by Results.
           </h2>

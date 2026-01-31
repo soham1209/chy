@@ -9,13 +9,15 @@ export const FocusAreas: React.FC = () => {
   const [activeIdx, setActiveIdx] = useState(0);
 
   return (
-    <section className="py-32 bg-white overflow-hidden">
+    <section className="py-12 bg-white overflow-hidden">
       <div className="container mx-auto px-6">
         
         {/* Header - Improved Typography */}
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-          <div className="max-w-3xl">
-            <SectionLabel text="Our Focus Areas" />
+        <div className="flex justify-center mb-16">
+          <div className="text-center max-w-3xl">
+            <div className="flex justify-center">
+              <SectionLabel text="Our Focus Areas" />
+            </div>
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 leading-[1.1] tracking-tight mt-4">
               Key Development Corridors <br/>
               <span className="">Across Sydney.</span>

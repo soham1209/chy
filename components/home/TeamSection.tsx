@@ -7,18 +7,19 @@ import { motion } from 'framer-motion';
 
 export const TeamSection: React.FC = () => {
   return (
-    <section className="py-16 md:py-28 bg-stone-50">
+    <section className="py-10 md:py-12 bg-stone-50">
       <div className="container mx-auto px-6">
         
         {/* Header - Centered & Minimal */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-20 gap-4 md:gap-8 border-b border-slate-200 pb-6 md:pb-8">
-          <div className="max-w-xl text-center md:text-left w-full md:w-auto">
-            <SectionLabel text="Our Experts" />
+        <div className="flex justify-center mb-12 md:mb-12">
+          <div className="text-center max-w-xl">
+            <div className="flex justify-center">
+              <SectionLabel text="Our Experts" />
+            </div>
             <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-4 tracking-tight">
-              Expertise Across <br/> Every Discipline.
+              Expertise Across Every Discipline.
             </h2>
           </div>
-          
         </div>
 
         {/* --- CARDS --- */}

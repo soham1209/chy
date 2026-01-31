@@ -22,17 +22,19 @@ export default function Home() {
 
       <MissionSection />
 
-      <section className="py-12 md:py-20 bg-white overflow-hidden">
+      <section className="py-12 md:py-12 bg-white overflow-hidden">
         <div className="container mx-auto px-6">
-          <div className="flex justify-between items-end mb-12">
+          <div className="flex flex-col items-center text-center mb-12">
             <div>
-              <SectionLabel text="Our Services" />
+              <div className="flex justify-center">
+                <SectionLabel text="Our Services" />
+              </div>
               <h2 className="text-4xl md:text-5xl font-bold text-slate-900">
                 Building excellence across <br/>
                 every development.
               </h2>
             </div>
-            <div className="hidden md:block">
+            <div className="mt-4">
               <Button
                 variant="ghost"
                 icon={<ArrowRight className="w-4 h-4" />}

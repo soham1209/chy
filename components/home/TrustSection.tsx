@@ -36,7 +36,7 @@ export const TrustSection: React.FC = () => {
   const [activeIdx, setActiveIdx] = useState(0);
 
   return (
-    <section className="py-16 md:py-12 bg-stone-50 relative overflow-hidden">
+    <section className="py-12 md:py-12 bg-stone-50 relative overflow-hidden">
       <div className="container mx-auto px-6">
         
         <div className="flex flex-col lg:flex-row gap-16 items-center">

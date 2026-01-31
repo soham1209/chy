@@ -16,7 +16,7 @@ export const ServicesSlider: React.FC = () => {
   const swiperRef = useRef<SwiperType | null>(null);
 
   return (
-    <div className="w-full py-2 md:py-4 relative group/slider px-2 md:px-12">
+    <div className="w-full py-2 relative group/slider px-2 md:px-12">
       
       {/* --- Navigation Buttons (Moved Inside) --- */}
       <button 
